@@ -1,0 +1,27 @@
+{
+  "name": "android-nougat-ssl-intercept",
+  "version": "1.0.0",
+  "description": "",
+  "main": "addSecurityExceptions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sh4hidkh4n/Android-Nougat-SSL-Intercept.git"
+  },
+  "keywords": [
+    "android",
+    "ssl",
+    "intercept"
+  ],
+  "author": "Shahid Kamal <shahidkamal08@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sh4hidkh4n/Android-Nougat-SSL-Intercept/issues"
+  },
+  "homepage": "https://github.com/sh4hidkh4n/Android-Nougat-SSL-Intercept#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  }
+}
