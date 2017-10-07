@@ -10,7 +10,8 @@ This script injects into the APK network security exceptions that allow third-pa
 
 ## Getting Started
 
-Clone the repository.
+1. Clone the repository.
+2. In repo directory run `npm install`
 
 ### Prerequisites
 1. Node >= 6.9.*
