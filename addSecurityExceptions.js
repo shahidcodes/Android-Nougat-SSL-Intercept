@@ -10,17 +10,18 @@ const apkDirName = path.dirname(apkPath)
 const sourceFolderName = __dirname + "/" + path.basename(apkPath.substr(0, apkPath.length-4)) 
 let keyPath = process.argv[3];
 if(keyPath == undefined){
-	keyPath = "./finalKey.jks";
+	keyPath = "finalKey.jks";
 }
 let keyPass = process.argv[4]
 if(keyPass == undefined) keyPass="android"
 
 function signAndAlign() {
 	let newApkPath = sourceFolderName + "/dist/" + path.basename(apkPath);
-	const signer = exec(`java -jar apksigner.jar sign --ks ${keyPath} --ks-pass pass:${keyPass} ${newApkPath}`)
+	const query = `java -jar apksigner.jar sign --ks ${keyPath} --ks-pass pass:${keyPass} "${newApkPath}"`
+	const signer = exec(query)
 	signer.stderr.on('data', data=>console.error(data));
 	signer.on('exit', function(){
-		console.log(`[+] Singed APK Under " + sourceFolderName + "/dist/${newApkPath}`);
+		console.log(`[+] Singed APK Under ${newApkPath}`);
 	})
 }
 
@@ -59,7 +60,7 @@ function prepareLaunch() {
 	});
 
 }
-const child = exec("java -jar apktool.jar -f --no-src d \"" + apkPath + "\"");
+const child = exec(`java -jar apktool.jar -f --no-src d "${apkPath}"`);
 child.stderr.on('data', function(err){
 	if(err) console.error(err)
 })
