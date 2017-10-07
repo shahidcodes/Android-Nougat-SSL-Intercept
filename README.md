@@ -24,9 +24,9 @@ Clone the repository.
 
 ```
 uses default keystore
-./addSecurityExceptions.sh myApp.apk 
+	$ node addSecurityException.js myApp.apk 
 
 with your keystore
-./addSecurityExceptions.sh myApp.apk finalKey.jks android
+	$ node addSecurityException.js myApp.apk finalKey.jks android
 
 ```
