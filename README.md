@@ -5,7 +5,7 @@ More info:
 1) https://developer.android.com/training/articles/security-config.html
 2) http://android-developers.blogspot.com/2016/07/changes-to-trusted-certificate.html
 
-This script injects into the APK network security exceptions that allow third-party software like Charles Proxy/Fiddler to listen to the network requests and responses of some Android applications.
+This script injects network security exceptions into the APK that allow third-party software like Charles Proxy/Fiddler to listen to the network requests and responses of some Android applications.
 
 
 ## Getting Started
