@@ -31,3 +31,7 @@ with your keystore
 	$ node addSecurityException.js myApp.apk finalKey.jks android
 
 ```
+
+### Alternatives
+- https://github.com/shroudedcode/apk-mitm
+- https://bird.ac/injecting-mitm-proxy-on-compiled-android-apk/
